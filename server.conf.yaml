@@ -1,0 +1,14 @@
+serverConfVersion: 1
+BrokerRegistry:
+  mqKeyRepository: '/home/aceuser/keystores/key'
+
+remoteDefaultQueueManager: '{MFTSAASDEMO}:MFTSAASDEMOQM'  # Specify an MQEndpoint policy in the format {policy project}:policy
+
+ResourceManagers:
+  FTEAgent:
+    coordinationQMgr: 'MFTSAASDEMO' # Set to the name of the coordination Queue Manager to be used by the embedded FTE Agent if not using the default Queue Manager as the coordination Queue Manager.
+    agentConfigurationDirectory: '/home/aceuser/generic/agent-config' # This is where the agent-config is unpacked
+    agentName: 'ACEAAS_AGENT'
+
+  JVM:
+    jvmSystemProperty: '-Duser.name=domstorey'  # Specify the name of your MQMCA here
