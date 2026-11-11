@@ -20,7 +20,7 @@ key.kdb: Your keystore configuration used by the ACE core MQ Client connection.
 key.sth: Your keystore configuration hash used by the ACE core MQ Client connection.
 
 ## Example Message Flow source project
-This is a message flow project which you can import into your ACE toolkit: [MFT_Testproject_src.zip](MFT_Testproject_src.zip) and this is the generated bar file from this project ([MFT_Testproject.bar](MFT_Testproject.bar)) which you can deploy to your Integration Runtime which connects an FTEInput node as a source and sends content to an FTEOutput node on another DEST_AGENT.
+This is a message flow project which you can import into your ACE toolkit: [MFTTest_project_src.zip](MFTTest_project_src.zip) and this is the generated bar file from this project ([MFTTest_project.bar](MFTTest_project.bar)) which you can deploy to your Integration Runtime which connects an FTEInput node as a source and sends content to an FTEOutput node on another DEST_AGENT.
 
 When deployed on an Integration Runtime this flow will start the App Connect Embedded MFT (FTE) Agent using the configurations above and the server.conf.yaml.
 
