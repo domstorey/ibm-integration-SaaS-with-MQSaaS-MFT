@@ -9,9 +9,9 @@ This repo contains examples for configuring an ACEaaS Integration Runtime to wor
 
 [MFTSAASDEMO.zip](MFTSAASDEMO.zip): Policy project configuration which defines the remote queue manager connection information
 
-mftqmgruser: Your setdbparms.txt configuration which sets the MQSaaS Queue Manager password eg "mq::MFTSAASDEMO domstorey \<Your IBM Cloud API key\>" for the ACE core MQ Client connection.
+[mftqmgruser](mftqmgruser): Your setdbparms.txt configuration which sets the MQSaaS Queue Manager password eg "mq::MFTSAASDEMO domstorey \<Your IBM Cloud API key\>" for the ACE core MQ Client connection.
 
-[agent-config.zip](agent-config.zip) ([unzipped contents](agent-config/)): Generic Files configurations which defines the coordination queue manager ([coordination.properties](agent-config/coordination.properties)), connection queue manager ([command.properties](agent-config/command.properties)), agent queue manager ([agent.properties](agent-config/agent.properties)) and [MQMFTCredentialsForACE.xml](agent-config/MQMFTCredentialsForACE.xml) (which contains the MQSaaS username and password and keystore password) zipped in a directory called 'agent-config'. This is referenced from your server.conf.yaml and used for the MFT/ FTE Java MQ client connection.
+[agent-config.zip](agent-config.zip) ([unzipped contents](agent-config/)): Generic Files configuration which defines the coordination queue manager ([coordination.properties](agent-config/coordination.properties)), connection queue manager ([command.properties](agent-config/command.properties)), agent queue manager ([agent.properties](agent-config/agent.properties)) and [MQMFTCredentialsForACE.xml](agent-config/MQMFTCredentialsForACE.xml) (which contains the MQSaaS username and password and keystore password) zipped in a directory called 'agent-config'. This is referenced from your server.conf.yaml and used for the MFT/ FTE Java MQ client connection.
 
 key.jks: Your keystore configuration pkcs12 file containing the qmgr cert and any other CA's needed, used by the FTE Agent Jave MQ Client
 
