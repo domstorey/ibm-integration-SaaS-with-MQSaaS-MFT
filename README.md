@@ -7,16 +7,17 @@ This repo contains examples for configuring an ACEaaS Integration Runtime to wor
 
 [server.conf.yaml](server.conf.yaml): Server.conf.yaml configuration which defines the remote MQSaaS Queue Manager, security and FTEAgent configuration
 
-[MFTSAASDEMO.zip](MFTSAASDEMO.zip): Policy configuration which defines the remote queue manager connection information
+[MFTSAASDEMO.zip](MFTSAASDEMO.zip): Policy project configuration which defines the remote queue manager connection information
 
-[agent-config.zip](agent-config.zip) ([unzipped contents](agent-config/)): Generic Files configurations which defines the coordination queue manager ([coordination.properties](agent-config/coordination.properties)), connection queue manager ([command.properties](agent-config/command.properties)), agent queue manager ([agent.properties](agent-config/agent.properties)) and [MQMFTCredentialsForACE.xml](agent-config/MQMFTCredentialsForACE.xml) (which contains the MQSaaS username and password and keystore password) zipped in a directory called 'agent-config'. This is referenced from your server.conf.yaml
+mftqmgruser: Your setdbparms.txt configuration which sets the MQSaaS Queue Manager password eg "mq::MFTSAASDEMO domstorey \<Your IBM Cloud API key\>" for the ACE core MQ Client connection.
+
+[agent-config.zip](agent-config.zip) ([unzipped contents](agent-config/)): Generic Files configurations which defines the coordination queue manager ([coordination.properties](agent-config/coordination.properties)), connection queue manager ([command.properties](agent-config/command.properties)), agent queue manager ([agent.properties](agent-config/agent.properties)) and [MQMFTCredentialsForACE.xml](agent-config/MQMFTCredentialsForACE.xml) (which contains the MQSaaS username and password and keystore password) zipped in a directory called 'agent-config'. This is referenced from your server.conf.yaml and used for the MFT/ FTE Java MQ client connection.
 
 key.jks: Your keystore configuration pkcs12 file containing the qmgr cert and any other CA's needed, used by the FTE Agent Jave MQ Client
 
-key.kdb: Your keystore configuration used by the ACE core
+key.kdb: Your keystore configuration used by the ACE core MQ Client connection.
 
-key.sth: Your keystore configuration hash used by the ACE core
-
+key.sth: Your keystore configuration hash used by the ACE core MQ Client connection.
 
 ## Example Message Flow source project
 This is a message flow project which you can import into your ACE toolkit: [MFT_Testproject_src.zip](MFT_Testproject_src.zip) and this is the generated bar file from this project ([MFT_Testproject.bar](MFT_Testproject.bar)) which you can deploy to your Integration Runtime which connects an FTEInput node as a source and sends content to an FTEOutput node on another DEST_AGENT.
