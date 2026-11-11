@@ -11,11 +11,11 @@ This repo contains examples for configuring an ACEaaS Integration Runtime to wor
 
 [agent-config.zip](agent-config.zip) ([unzipped contents](agent-config/)): Generic Files configurations which defines the coordination queue manager ([coordination.properties](agent-config/coordination.properties)), connection queue manager ([command.properties](agent-config/command.properties)), agent queue manager ([agent.properties](agent-config/agent.properties)) and [MQMFTCredentialsForACE.xml](agent-config/MQMFTCredentialsForACE.xml) (which contains the MQSaaS username and password and keystore password) zipped in a directory called 'agent-config'. This is referenced from your server.conf.yaml
 
-key.jks: Your keystore pkcs12 file containing the qmgr cert and any other CA's needed, used by the FTE Agent Jave MQ Client
+key.jks: Your keystore configuration pkcs12 file containing the qmgr cert and any other CA's needed, used by the FTE Agent Jave MQ Client
 
-key.kdb: Your keystore used by the ACE core
+key.kdb: Your keystore configuration used by the ACE core
 
-key.sth: Your keystore hash used by the ACE core
+key.sth: Your keystore configuration hash used by the ACE core
 
 
 ## Example Message Flow source project
